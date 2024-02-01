@@ -1,6 +1,13 @@
-import { BinarySearch, SearchLinear } from "./search";
+import {
+  BinarySearch,
+  SearchLinear,
+  BubbleSort,
+  InsertionSort,
+  MergeSort,
+  SelectionSort,
+} from "./algo";
+
 import { fizzbuzz } from "./exercise";
-import { BubbleSort, InsertionSort, MergeSort, SelectionSort } from "./sorting";
 
 // exercise
 fizzbuzz(15); // n = 15

@@ -1,6 +1,8 @@
 # Learn Data Structure and Algorithm
 
-learning with implement spec driven evelopment or TDD
+> try to consistent update everday until **31 March 2024**!!!
+
+learning with implement spec driven evelopment or TDD, all the usecase write in Typescript and Javascript.
 
 ## Sorting
 
@@ -9,7 +11,14 @@ learning with implement spec driven evelopment or TDD
 - insertion sort
 - merge sort
 
+## Array Search
+
+- linear search
+- bubble search
+
 ## Fun exerciese
+
+mostly updated after finishing leetcode exercise 😎
 
 - fizzbuzz game
 
@@ -18,6 +27,15 @@ learning with implement spec driven evelopment or TDD
 - [visualgo](https://visualgo.net/)
 - [leetcode](https://leetcodehttps://leetcode.com)
 - [tlx.toki](https://tlx.toki.id/)
+- [bigfrontend](https://bigfrontend.dev)
+
+## Graph sheet big O notation
+
+source from [bigOCheatSheet](https://www.bigocheatsheet.com/)
+
+![chart](./chart.png)
+![common_data](./common.png)
+![array_sorting](./array-sorting.png)
 
 To install dependencies:
 
@@ -29,6 +47,12 @@ To run:
 
 ```bash
 bun dev
+```
+
+to run the testing
+
+```
+bun test
 ```
 
 This project was created using `bun init` in bun v1.0.25. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.

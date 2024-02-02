@@ -7,10 +7,22 @@ import {
   SelectionSort,
 } from "./algo";
 
-import { fizzbuzz } from "./exercise";
+import { fizzbuzz, FindMeetings } from "./exercise";
 
 // exercise
 fizzbuzz(15); // n = 15
+// Example usage:
+const schedules = [
+  [
+    [13, 15],
+    [11, 12],
+    [10, 13],
+  ], // Schedule for member 1
+  [[8, 9]], // Schedule for member 2
+  [[13, 18]], // Schedule for member 3
+];
+const meetings = FindMeetings(schedules);
+console.log("meetings", meetings);
 
 // sorting
 console.log("bubble sort", BubbleSort([4, 7, 3, 6, 2])); // sorting array data

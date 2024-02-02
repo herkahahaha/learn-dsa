@@ -1,26 +1,8 @@
-import { expect, test, describe, mock } from "bun:test";
+import { expect, test, describe } from "bun:test";
 
-// import { fetchData } from "./fetch";
-import { fizzbuzz } from "./exercise";
-
-// async function processData() {
-//   try {
-//     const data = await fetchData();
-//     return data.value * 2; // Double the value
-//   } catch (error) {
-//     console.error("Error fetching data:", error);
-//     throw error;
-//   }
-// }
-// const caller = mock("./fetch");
+import { fizzbuzz } from ".";
 
 describe("testing unit in index file", () => {
-  // test("fetch data", async () => {
-  //   await caller.mockResolvedValue({ value: 21 });
-  //   const expexted = await processData();
-  //   expect(expexted).toBe(42);
-  // });
-
   test("print Fizz every multiples of 3", () => {
     const expected = fizzbuzz(3);
     const result = ["1", "2", "Fizz"];

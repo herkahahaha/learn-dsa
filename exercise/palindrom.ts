@@ -12,13 +12,13 @@ export const palindrom = (args: string) => {
   // }
 
   // without temporary variable
-  for (let i = 0; i < args.length; i++) {
-    let indexAwal = i;
-    let indexAkhir = args.length - i - 1;
+  // for (let i = 0; i < args.length; i++) {
+  //   let indexAwal = i;
+  //   let indexAkhir = args.length - i - 1;
 
-    if (args[indexAwal] !== args[indexAkhir]) return false;
-  }
-  return true;
+  //   if (args[indexAwal] !== args[indexAkhir]) return false;
+  // }
+  // return true;
 
   // check half of args length data
   for (let i = 0; i < args.length / 2; i++) {

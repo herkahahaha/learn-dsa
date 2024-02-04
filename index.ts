@@ -8,6 +8,7 @@ import {
 } from "./algo";
 
 import { fizzbuzz, FindMeetings } from "./exercise";
+import { palindrom } from "./exercise/palindrom";
 
 // exercise
 fizzbuzz(15); // n = 15
@@ -23,6 +24,9 @@ const schedules = [
 ];
 const meetings = FindMeetings(schedules);
 console.log("meetings", meetings);
+
+palindrom("ab"); //false
+palindrom("kodok"); //true
 
 // sorting
 console.log("bubble sort", BubbleSort([4, 7, 3, 6, 2])); // sorting array data

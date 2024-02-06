@@ -5,10 +5,10 @@ import {
   InsertionSort,
   MergeSort,
   SelectionSort,
+  createHashTable,
 } from "./algo";
 
-import { fizzbuzz, FindMeetings } from "./exercise";
-import { palindrom } from "./exercise/palindrom";
+import { fizzbuzz, FindMeetings, palindrom, twoSum } from "./exercise";
 
 // exercise
 fizzbuzz(15); // n = 15
@@ -28,6 +28,8 @@ console.log("meetings", meetings);
 palindrom("ab"); //false
 palindrom("kodok"); //true
 
+twoSum([3, 2, 4], 6); // [1,2]
+
 // sorting
 console.log("bubble sort", BubbleSort([4, 7, 3, 6, 2])); // sorting array data
 console.log("selection sort", SelectionSort([64, 34, 25, 12, 22, 11, 90])); //selection sort
@@ -40,3 +42,17 @@ console.log(
   "binary search",
   BinarySearch([100, 101, 102, 1000, 1001, 1002], 102)
 );
+
+// Example usage of HashTable
+const hashTable = createHashTable();
+
+hashTable.insert("name", "John");
+hashTable.insert("age", 30);
+hashTable.insert("city", "New York");
+
+console.log(hashTable.retrieve("name")); // Output: "John"
+console.log(hashTable.contains("age")); // Output: true
+
+hashTable.remove("age");
+
+console.log(hashTable.keys()); // Output: ["name", "city"]

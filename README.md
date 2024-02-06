@@ -16,11 +16,17 @@ learning with implement spec driven evelopment or TDD, all the usecase write in 
 - linear search
 - bubble search
 
+# Hastable
+
+- sample crud hastable
+
 ## Fun exerciese
 
 mostly updated after finishing leetcode exercise 😎
 
 - fizzbuzz game
+- palindrom
+- twosum
 
 ### Reference
 

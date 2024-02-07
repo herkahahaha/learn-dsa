@@ -8,4 +8,4 @@ export * from "./sorting/insertion_sort";
 export * from "./sorting/merge_sort";
 
 // hastable
-export * from "./hastable/index";
+// export * from "./hastable/index";

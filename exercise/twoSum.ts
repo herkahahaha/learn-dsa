@@ -1,22 +1,22 @@
 // hastable using array O(n^2)
 
-// export const twoSum = (args: number[], val: number) => {
-//   let firstIndex = 0;
-//   let maxIndex = args.length - 1;
+export const twoSumArr = (args: number[], val: number) => {
+  let firstIndex = 0;
+  let maxIndex = args.length - 1;
 
-//   while (firstIndex < maxIndex) {
-//     let secoundIndex = firstIndex + 1;
-//     while (secoundIndex <= maxIndex) {
-//       if (args[firstIndex] + args[secoundIndex] === val) {
-//         return [firstIndex, secoundIndex];
-//       }
-//       secoundIndex++;
-//     }
-//     firstIndex++;
-//   }
-// };
+  while (firstIndex < maxIndex) {
+    let secoundIndex = firstIndex + 1;
+    while (secoundIndex <= maxIndex) {
+      if (args[firstIndex] + args[secoundIndex] === val) {
+        return [firstIndex, secoundIndex];
+      }
+      secoundIndex++;
+    }
+    firstIndex++;
+  }
+};
 
-// using hastable
+// using hastable O(n)
 
 export const twoSum = (nums: number[], target: number) => {
   let hasTable: any = {};

@@ -5,8 +5,8 @@ import {
   InsertionSort,
   MergeSort,
   SelectionSort,
-  createHashTable,
 } from "./algo";
+import { createHashTable } from "./algo/hastable";
 
 import { fizzbuzz, FindMeetings, palindrom, twoSum } from "./exercise";
 

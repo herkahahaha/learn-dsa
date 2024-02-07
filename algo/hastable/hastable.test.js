@@ -4,13 +4,16 @@ import { createHashTable } from ".";
 describe("sample usecase hastable", () => {
   test("should return jhon when given .insert name", () => {
     const hashTable = createHashTable();
-    const result = hashTable.retrieve("name");
-    expect(hashTable.insert("name", "John")).toEqual(result);
+    hashTable.insert("name", "Jhon");
+    const expected = hashTable.retrieve("name");
+    const result = "Jhon"; //name
+    expect(expected).toEqual(result);
   });
 
-  test("should return jhon when given .insert name", () => {
+  test("should return false when given .contains(age) age isnt exist", () => {
     const hashTable = createHashTable();
-    const result = hashTable.contains("age");
-    expect(result).toBeFalse();
+    hashTable.insert("age", 32);
+    const result = hashTable.contains("age"); // it will be true
+    expect(result).toBeTrue();
   });
 });

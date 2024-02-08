@@ -27,6 +27,7 @@ mostly updated after finishing leetcode exercise 😎
 - fizzbuzz game
 - palindrom
 - twosum
+- fibonacci
 
 ### Reference
 

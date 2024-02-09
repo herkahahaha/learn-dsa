@@ -8,7 +8,14 @@ import {
 } from "./algo";
 import { createHashTable } from "./algo/hastable";
 
-import { fizzbuzz, FindMeetings, palindrom, twoSum } from "./exercise";
+import {
+  fizzbuzz,
+  FindMeetings,
+  palindrom,
+  twoSum,
+  LinterStack,
+  LinterStack2,
+} from "./exercise";
 
 // exercise
 fizzbuzz(15); // n = 15
@@ -30,7 +37,12 @@ palindrom("kodok"); //true
 
 twoSum([3, 2, 4], 6); // [1,2]
 
-// sorting
+LinterStack("({})"); //true
+LinterStack("[({})]"); //true
+LinterStack("[]"); //true
+LinterStack2("[}"); //false
+
+// sorting ======================================================================
 console.log("bubble sort", BubbleSort([4, 7, 3, 6, 2])); // sorting array data
 console.log("selection sort", SelectionSort([64, 34, 25, 12, 22, 11, 90])); //selection sort
 console.log("insertion sort", InsertionSort([4, 5, 2, 3, 1])); //selection sort

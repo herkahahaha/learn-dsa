@@ -1,6 +1,6 @@
 import { expect, test, describe } from "bun:test";
 
-import { fizzbuzz } from ".";
+import { fizzbuzz } from "..";
 
 describe("testing unit in index file", () => {
   test("print Fizz every multiples of 3", () => {

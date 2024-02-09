@@ -1,5 +1,5 @@
 import { describe, test, expect } from "bun:test";
-import { twoSum } from ".";
+import { twoSum } from "..";
 
 describe("two sum sample using hastable", () => {
   test("should return [0,1] when given ([1,2],3)", () => {

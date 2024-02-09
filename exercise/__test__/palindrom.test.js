@@ -1,5 +1,5 @@
 import { test, expect, describe } from "bun:test";
-import { palindrom } from "./palindrom";
+import { palindrom } from "../palindrom";
 
 describe("anagram or palindrome test exercise", () => {
   //  true

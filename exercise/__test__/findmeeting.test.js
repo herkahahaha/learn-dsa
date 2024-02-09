@@ -1,5 +1,5 @@
 import { describe, test, expect } from "bun:test";
-import { FindMeetings } from "./findmeeting";
+import { FindMeetings } from "../findmeeting";
 
 const schedules = [
   [

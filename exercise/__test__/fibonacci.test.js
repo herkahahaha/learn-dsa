@@ -1,5 +1,5 @@
 import { describe, test, expect } from "bun:test";
-import { Fibonacci, FibonacciRec } from "./fibonacci";
+import { Fibonacci, FibonacciRec } from "../fibonacci";
 
 // Fibonacci adalah sebuah bilangan yang di mana setiap bilangannya adalah jumlah dari dari dua bilangan sebelumnya.
 

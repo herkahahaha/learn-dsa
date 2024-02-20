@@ -67,17 +67,20 @@ export const TrappedWaterStack = (arr: number[]) => {
     // console.log("curr stack", arr[stack.length]);
     // remove bar from the stack until the condition holds
     while (stack.length != 0 && arr[stack[stack.length - 1]] < arr[i]) {
+      // store the high of the tyop and pop it
       let pop_arr = stack.pop() as number;
-      let popping = arr[pop_arr];
+      let hight_popping = arr[pop_arr];
       // console.log("poping", popping);
 
+      // if stack dooes not have any bars of the poped bar or has no left boudary
       if (stack.length == 0) break;
 
       // add distance between left and right boundary of popped bar
       let distance = i - stack[stack.length - 1] - 1;
       // console.log("distance", distance);
       //  calculate
-      let min_height = Math.min(arr[stack[stack.length - 1]], arr[i]) - popping;
+      let min_height =
+        Math.min(arr[stack[stack.length - 1]], arr[i]) - hight_popping;
       // console.log("min-height", min_height);
 
       store += distance * min_height;
@@ -107,9 +110,9 @@ export const TrappedWater2pointer = (arr: number[]) => {
     // we need check min of left and right max for each element
     if (r_max <= l_max) {
       // add the difference between current value and right max at index right
-      console.log("r_max", r_max);
-      console.log("arr of right", arr[right]);
-      result += Math.max(0, r_max - arr[right]);
+      // console.log("r_max", r_max);
+      // console.log("arr of right", arr[right]);
+      // result += Math.max(0, r_max - arr[right]);
 
       // update right max
       r_max = Math.max(r_max, arr[right]);

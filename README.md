@@ -4,6 +4,13 @@
 
 learning with implement spec driven evelopment or TDD, all the usecase write in Typescript and Javascript.
 
+## Array
+
+- find even number
+- max consecutive ones
+- remove duplicat from sorted array
+- squares array
+
 ## Sorting
 
 - bubble sort
@@ -30,6 +37,7 @@ mostly updated after finishing leetcode exercise 😎
 - twosum
 - fibonacci
 - Linter Stack
+- Trapping Rain Water
 
 ### Reference
 

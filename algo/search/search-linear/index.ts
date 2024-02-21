@@ -1,4 +1,7 @@
-export const SearchLinear = (inputArray: number[], searchValue: any) => {
+export const SearchLinear = (
+  inputArray: number[],
+  searchValue: number
+): number | undefined => {
   for (let i = 0; i < inputArray.length; i++) {
     //  check if search value has same value with data
     if (inputArray[i] === searchValue) return i;

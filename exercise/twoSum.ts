@@ -19,7 +19,7 @@ export const twoSumArr = (args: number[], val: number) => {
 // using hastable O(n)
 
 export const twoSum = (nums: number[], target: number) => {
-  let hasTable: any = {};
+  let hasTable: Record<number, number> = {};
 
   for (let i = 0; i < nums.length; i++) {
     let secEl = target - nums[i];

@@ -1,4 +1,4 @@
-export const BinarySearch = (arr: number[], searchVal: number) => {
+export const BinarySearch = (arr: number[], searchVal: number): number => {
   let left = 0;
   let right = arr.length - 1;
 

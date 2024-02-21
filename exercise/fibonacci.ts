@@ -4,7 +4,7 @@
 Time Complexity: O(n) 
 Auxiliary Space: O(1)
 */
-export const Fibonacci = (nums: any) => {
+export const Fibonacci = (nums: number) => {
   let a = 0;
   let b = 1;
   let c;
@@ -23,7 +23,7 @@ Time Complexity: Exponential, as every function calls two other functions.
 Auxiliary space complexity: O(n), as the maximum depth of the recursion tree is n.
 */
 
-export const FibonacciRec = (nums: any): any => {
+export const FibonacciRec = (nums: number): number => {
   if (nums <= 1) return nums;
   return FibonacciRec(nums - 1) + FibonacciRec(nums - 2);
 };

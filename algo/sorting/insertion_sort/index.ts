@@ -1,4 +1,4 @@
-export const InsertionSort = (arr: any) => {
+export const InsertionSort = (arr: number[]): number[] => {
   const len = arr.length;
 
   for (let i = 1; i < len; i++) {

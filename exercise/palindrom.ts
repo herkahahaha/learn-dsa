@@ -35,7 +35,7 @@ export const palindrom2 = (args: string) => {
 };
 
 // advantage solution using recursive
-export const palindromRecursive: any = (value: string, i: number) => {
+export const palindromRecursive = (value: string, i: number): boolean => {
   if (i < value.length / 2) {
     let indexAwal = i;
     let indexAkhir = value.length - i - 1;
@@ -50,6 +50,6 @@ export const palindromRecursive: any = (value: string, i: number) => {
   }
 };
 
-export const palindrom3 = (args: string) => {
+export const palindrom3 = (args: string): boolean => {
   return palindromRecursive(args, 0);
 };

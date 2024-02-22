@@ -28,13 +28,13 @@ Space Complexity: O(1). No extra space is required.
 */
 
 export const TrappedWater = (arr: number[]) => {
-  let stored = 0;
+  let stored = 0 as number;
 
   // loop elm of the array
   for (let i = 1; i < arr.length; i++) {
     // console.log("data", arr[i]);
     // find max element on its left
-    let left = arr[i];
+    let left: number = arr[i];
     for (let j = 0; j < i; j++) {
       // console.log("left | arr[j]", left, arr[j]);
       left = Math.max(left, arr[j]);
@@ -42,7 +42,7 @@ export const TrappedWater = (arr: number[]) => {
     }
 
     // find max element on its right
-    let right = arr[i];
+    let right: number = arr[i];
     for (let k = i + 1; k < arr.length; k++) {
       // console.log("right | arr[k]", right, arr[k]);
       right = Math.max(right, arr[k]);

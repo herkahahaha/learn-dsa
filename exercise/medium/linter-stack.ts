@@ -1,13 +1,13 @@
 // with temporary variable
-export const LinterStack = (str: any) => {
-  let stack = [];
-  let bracketPairs: any = {
+export const LinterStack = (str: string[]): boolean => {
+  let stack: string[] = [];
+  let bracketPairs: Record<string, string> = {
     ")": "(",
     "}": "{",
     "]": "[",
   };
-  let openingBracket = ["(", "{", "["];
-  let closingBracket = [")", "}", "]"];
+  let openingBracket = ["(", "{", "["] as string[];
+  let closingBracket = [")", "}", "]"] as string[];
 
   for (let i = 0; i < str.length; i++) {
     const char = str[i];
@@ -22,10 +22,10 @@ export const LinterStack = (str: any) => {
 };
 
 // without temporary variable
-export const LinterStack2 = (str: any) => {
+export const LinterStack2 = (str: string[]): boolean => {
   // let str = "({[]})";
-  const stack: any = [];
-  const breakets: any = {
+  const stack: string[] = [];
+  const breakets: Record<string, string> = {
     "(": ")",
     "{": "}",
     "[": "]",
@@ -36,7 +36,7 @@ export const LinterStack2 = (str: any) => {
       // console.log("charInBreakets", char in breakets);
       stack.push(char);
     } else if (char == ")" || char == "}" || char == "]") {
-      if (breakets[stack.pop()] !== char) return false;
+      if (breakets[stack.pop() as string] !== char) return false;
     }
   }
   return stack.length === 0;

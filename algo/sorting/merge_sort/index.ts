@@ -1,4 +1,4 @@
-export const MergeSort = (n: any) => {
+export const MergeSort = (n: number[]): number[] => {
   const len = n.length;
   if (len <= 1) return n;
 
@@ -21,8 +21,8 @@ export const MergeSort = (n: any) => {
 
 // create merge function
 
-const merging = (leftArr: any, rightArr: any) => {
-  let result: any = [];
+const merging = (leftArr: number[], rightArr: number[]) => {
+  let result = [] as number[];
   let leftIndex = 0;
   let rightIndex = 0;
 

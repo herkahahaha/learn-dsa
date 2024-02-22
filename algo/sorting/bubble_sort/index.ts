@@ -1,4 +1,4 @@
-export const BubbleSort = (arr: number[]) => {
+export const BubbleSort = (arr: number[]): number[] => {
   // sorting usin sort func
   // return n.sort((a, b) => a - b);
 

@@ -1,5 +1,5 @@
-export const fizzbuzz = (n: any) => {
-  const arr = [];
+export const fizzbuzz = (n: number) => {
+  const arr: string[] = [];
   for (let i = 1; i <= n; i++) {
     // Multiple conditions in ternary conditional operator
     // i % 3 == 0 && i % 5 == 0
@@ -9,7 +9,7 @@ export const fizzbuzz = (n: any) => {
     //   : i % 3 == 0
     //   ? str.push("Fizz")
     //   : str.push(`${i}`);
-    let str = "";
+    let str = "" as string;
     if (i % 3 == 0) {
       str = "Fizz";
     }

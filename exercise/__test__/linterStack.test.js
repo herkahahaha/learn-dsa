@@ -1,5 +1,5 @@
 import { test, expect, describe } from "bun:test";
-import { LinterStack, LinterStack2 } from "../linter-stack";
+import { LinterStack, LinterStack2 } from "../medium/linter-stack";
 
 describe("testing for linter stack", () => {
   test("should first return true", () => {

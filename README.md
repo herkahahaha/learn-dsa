@@ -27,6 +27,10 @@ learning with implement spec driven evelopment or TDD, all the usecase write in 
 
 - sample crud hastable
 
+# Binary Tree
+
+- Insert Search and Delete in binary tree
+
 ## Fun exerciese
 
 mostly updated after finishing leetcode exercise 😎
@@ -38,6 +42,10 @@ mostly updated after finishing leetcode exercise 😎
 - fibonacci
 - Linter Stack
 - Trapping Rain Water
+- Stars String
+- Group Anagram
+- Edit Distance
+- lowless common ancestor
 
 ### Reference
 
@@ -68,8 +76,12 @@ bun dev
 
 to run the testing
 
-```
+```cli
+// run all test
 bun test
+
+// run specific test using --watch
+bun test ./exercise/__test__/linterStack.test.js --watch
 ```
 
 This project was created using `bun init` in bun v1.0.25. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.

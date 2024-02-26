@@ -21,14 +21,3 @@ export const BinarySearch = (arr: number[], searchVal: number): number => {
   // If target is not found in the array
   return -1;
 };
-
-/*
-
-For a linear search algorithm:
-
-Time Complexity: O(n)
-The time complexity of a linear search is O(n) because, in the worst-case scenario, the algorithm may need to iterate through all n elements in the list to find the target element.
-
-Space Complexity: O(1)
-The space complexity of a linear search is O(1) because the amount of extra space used by the algorithm does not increase with the size of the input. It only requires a constant amount of additional space for variables like loop counters and temporary storage.
-*/

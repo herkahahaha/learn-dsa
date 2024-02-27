@@ -21,4 +21,20 @@ Explanation: The LCA of nodes 5 and 1 is 3.`, () => {
     const result = 3;
     expect(expected.val).toEqual(result);
   });
+
+  test(`Input: root = [1,2], p = 1, q = 2
+Output: 1
+Explanation: The LCA of nodes 1 and 2 is 1.`, () => {
+    const root = new TreeNode(1);
+    root.left = new TreeNode(2);
+    root.right = new TreeNode(1);
+
+    // const arr = [3, 5, 1, 6, 2, 0, 8, null, null, 7, 4];
+    const p = root.left;
+    const q = root.right;
+    const expected = lowlestCommonAncestor(root, p, q);
+    const result = 1;
+    expect(expected.val).toEqual(result);
+  });
+
 });

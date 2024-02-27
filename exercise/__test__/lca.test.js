@@ -36,4 +36,5 @@ Explanation: The LCA of nodes 1 and 2 is 1.`, () => {
     const result = 1;
     expect(expected.val).toEqual(result);
   });
+
 });

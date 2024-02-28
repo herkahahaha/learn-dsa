@@ -1,5 +1,5 @@
 /*
-  First in Last Out
+  last in, first out
 */
 class Stuck {
   items: number[] | string[];

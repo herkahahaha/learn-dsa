@@ -1,70 +1,59 @@
-import {
-  BinarySearch,
-  SearchLinear,
-  BubbleSort,
-  InsertionSort,
-  MergeSort,
-  SelectionSort,
-} from "./algo";
-import { createHashTable } from "./algo/hastable";
+//===================== popular interview question =======================
+/*
+for anagram usecase
+first thing in my mind is 
+  1. create temp file as object such as hasmap
+  2. loop traverse every element
+  3. we create key from sorting the character already split
+  4. we create value base on strig data
+  5. set temp[key] = value
+  6. return Object.values(temp)
+*/
 
-import {
-  fizzbuzz,
-  FindMeetings,
-  palindrom,
-  twoSum,
-  LinterStack,
-  LinterStack2,
-} from "./exercise";
+export const Anagrams = (args: string[]): string[][] => {
+  let temp: Record<string, string[]> = {};
 
-// exercise
-fizzbuzz(15); // n = 15
-// Example usage:
-const schedules = [
-  [
-    [13, 15],
-    [11, 12],
-    [10, 13],
-  ], // Schedule for member 1
-  [[8, 9]], // Schedule for member 2
-  [[13, 18]], // Schedule for member 3
-];
-const meetings = FindMeetings(schedules);
-console.log("meetings", meetings);
+  args.forEach((char) => {
+    const key = char.split("").sort().join() as string;
+    const value = temp[key] ?? [];
+    value.push(char);
+    temp[key] = value;
+  });
 
-palindrom("ab"); //false
-palindrom("kodok"); //true
+  return Object.values(temp);
+};
 
-twoSum([3, 2, 4], 6); // [1,2]
+/*
+parenthesist usecase
+given boolean true when {[()]} 
+given boolean false when {[()] 
+every open breacket have close breacket should be return true
 
-LinterStack("({})"); //true
-LinterStack("[({})]"); //true
-LinterStack("[]"); //true
-LinterStack2("[}"); //false
+first thing in my mind 
+1. create stack as array
+2. and open and close value as breacket local variable
+3. loop traverse every string
+    if character in open value of breacket , push into stack
+    else if close breacket char has matching with the stack
+      breackets[stack.pop()] not wqual whit char will be false
+*/
 
-// sorting ======================================================================
-console.log("bubble sort", BubbleSort([4, 7, 3, 6, 2])); // sorting array data
-console.log("selection sort", SelectionSort([64, 34, 25, 12, 22, 11, 90])); //selection sort
-console.log("insertion sort", InsertionSort([4, 5, 2, 3, 1])); //selection sort
-console.log("merge sort", MergeSort([3, 7, 4, 6, 5])); //merge sort
+export const parenthesists = (str: string): boolean => {
+  let stack = [] as string[];
+  let breacket: Record<string, string> = {
+    "[": "]",
+    "(": ")",
+    "{": "}",
+  };
 
-// array sesarch
-console.log("linear search", SearchLinear([3, 5, 6, 7, 1, 9], 9));
-console.log(
-  "binary search",
-  BinarySearch([100, 101, 102, 1000, 1001, 1002], 102)
-);
+  for (let char of str) {
+    if (char in breacket) {
+      // console.log(char);
+      stack.push(char);
+    } else if (char == "]" || char == ")" || char == "}") {
+      if (breacket[stack.pop() as string] !== char) return false;
+    }
+  }
 
-// Example usage of HashTable
-const hashTable = createHashTable();
-
-hashTable.insert("name", "John");
-hashTable.insert("age", 30);
-hashTable.insert("city", "New York");
-
-console.log(hashTable.retrieve("name")); // Output: "John"
-console.log(hashTable.contains("age")); // Output: true
-
-hashTable.remove("age");
-
-console.log(hashTable.keys()); // Output: ["name", "city"]
+  return stack.length === 0;
+};

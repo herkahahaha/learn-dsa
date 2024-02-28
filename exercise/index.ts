@@ -3,4 +3,4 @@ export * from "./medium/findmeeting";
 export * from "./palindrom";
 export * from "./twoSum";
 export * from "./medium/linter-stack";
-export * from "./trapping-rain-water";
+export * from "./hard/trapping-rain-water";

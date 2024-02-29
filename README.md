@@ -31,6 +31,10 @@ learning with implement spec driven evelopment or TDD, all the usecase write in 
 
 - Insert Search and Delete in binary tree
 
+# Link List
+
+- Add value in link list
+
 ## Fun exerciese
 
 mostly updated after finishing leetcode exercise 😎
@@ -46,6 +50,7 @@ mostly updated after finishing leetcode exercise 😎
 - Group Anagram
 - Edit Distance
 - lowless common ancestor
+- can place flower
 
 ### Reference
 

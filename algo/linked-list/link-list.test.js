@@ -6,13 +6,14 @@ describe("Create linklist algorithm POST | PRINT | DELETE", () => {
     myLinkList.append(10);
     myLinkList.append(11);
     myLinkList.append(12);
+    myLinkList.delete(12);
     const expected = myLinkList.print();
-    const result = "101112";
+    const result = "1011";
     expect(expected).toEqual(result);
   });
   // test("should be delete 11 and print the value", () => {
-  //   const expected = myLinkList.delete(11);
-  //   const result = "1012";
+  //   const expected = myLinkList.delete(12);
+  //   const result = "1011";
   //   expect(expected).toEqual(result);
   // });
 });

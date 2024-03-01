@@ -34,31 +34,39 @@ class LinkList {
   }
 
   // delete
-  // delete(value: number) {
-  //   if (!this.head) {
-  //     return; // Senarai kosong
-  //   }
+  delete(value: number): void {
+    if (!this.head) {
+      return; // Senarai kosong
+    }
 
-  //   // Jika simpul pertama memiliki nilai yang sesuai
-  //   if (this.head.data === value) {
-  //     this.head = this.head.next;
-  //     return;
-  //   }
+    // Jika simpul pertama memiliki nilai yang sesuai
+    if (this.head.data === value) {
+      this.head = this.head.next;
+      return;
+    }
 
-  //   let current = this.head;
-  //   let prev: Node | null = null;
+    let current = this.head;
+    let prev: Node | null = null;
 
-  //   // Cari simpul dengan nilai yang sesuai
-  //   while (current && current?.data !== value) {
-  //     prev = current;
-  //     current = current?.next as never;
-  //   }
+    // Cari simpul dengan nilai yang sesuai
+    // while (current && current?.data !== value) {
+    //   prev = current;
+    //   current = current?.next as never;
+    // }
 
-  //   // Jika ditemukan, ubah tautan
-  //   if (current) {
-  //     prev!.next = current.next;
-  //   }
-  // }
+    // Jika ditemukan, ubah tautan
+    // if (current) {
+    //   prev!.next = current.next;
+    // }
+
+    while (current.next) {
+      if (current.next.data === value) {
+        current.next = current.next.next;
+        return;
+      }
+      current = current.next;
+    }
+  }
 }
 
 const myLinkList = new LinkList();

@@ -51,6 +51,7 @@ mostly updated after finishing leetcode exercise 😎
 - Edit Distance
 - lowless common ancestor
 - can place flower
+- reverse word
 
 ### Reference
 

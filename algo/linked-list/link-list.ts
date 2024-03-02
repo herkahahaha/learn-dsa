@@ -67,6 +67,16 @@ class LinkList {
       current = current.next;
     }
   }
+
+  // Add value in middle
+  insertAfter(existingNode: Node, data: number) {
+    if (!existingNode) {
+      return;
+    } // not valid
+    const newNode = new Node(data);
+    newNode.next = existingNode.next;
+    existingNode.next = newNode;
+  }
 }
 
 const myLinkList = new LinkList();

@@ -112,7 +112,7 @@ export const TrappedWater2pointer = (arr: number[]) => {
       // add the difference between current value and right max at index right
       // console.log("r_max", r_max);
       // console.log("arr of right", arr[right]);
-      // result += Math.max(0, r_max - arr[right]);
+      result += Math.max(0, r_max - arr[right]);
 
       // update right max
       r_max = Math.max(r_max, arr[right]);

@@ -2,7 +2,12 @@ import { describe, test, expect } from "bun:test";
 import Graph from "./graph";
 
 describe("Create Graph algorithm", () => {
-  test("should be add 1,2,3 and print the value", () => {
+  test(`
+  - Add/Remove Vertex: Add or remove a vertex in a graph.
+  - Add/Remove Edge: Add or remove an edge between two vertices.
+  - Check if the graph contains a given value.
+  - Find the path from one vertex to another vertex
+  `, () => {
     const g = new Graph(6);
     var vertices = ["A", "B", "C", "D", "E", "F"];
 

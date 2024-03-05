@@ -1,11 +1,11 @@
 import { describe, test, expect } from "bun:test";
-import { twoSum } from "..";
+import { twoSum, twoSumArr } from "..";
 
-describe("two sum sample using hastable", () => {
+describe("two sum sample using twopointer, and hastable", () => {
   test("should return [0,1] when given ([1,2],3)", () => {
     const expected = 3;
     const result = [0, 1];
-    expect(twoSum([1, 2], expected)).toEqual(result);
+    expect(twoSumArr([1, 2], expected)).toEqual(result);
   });
 
   test("should return [0,2] when given ([1,2,3],4)", () => {

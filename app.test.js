@@ -1,5 +1,5 @@
 import { test, expect } from "bun:test";
-import { Anagrams, parenthesists, reverseWord } from "./index";
+import { Anagrams, parenthesists, reverseWord, topKFrequent } from "./index";
 
 // anagram
 test("should first return nested array based on anagram group when params is single array string value ", () => {
@@ -28,5 +28,12 @@ Note that s may contain leading or trailing spaces or multiple spaces between tw
 `, () => {
   const expected = reverseWord("the sky is blue");
   const result = "blue is sky the";
+  expect(expected).toEqual(result);
+});
+
+// Top K frequent || medium
+test("Given an integer array nums and an integer k, return the k most frequent elements. You may return the answer in any order.", () => {
+  const expected = topKFrequent([1, 1, 1, 2, 2, 3], 2);
+  const result = [1, 2];
   expect(expected).toEqual(result);
 });

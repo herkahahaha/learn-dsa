@@ -3,13 +3,17 @@ import myLinkList from "./link-list";
 
 describe("Create linklist algorithm POST | PRINT | DELETE", () => {
   test("should be add 1,2,3 and print the value", () => {
-    myLinkList.append(1); // add first value as head
-    myLinkList.append(2);
-    myLinkList.append(3); // last value as tall
-    myLinkList.insertAfter(myLinkList.head, 4); // add after head
-    myLinkList.delete(3);
-    const expected = myLinkList.print();
-    const result = "142";
-    expect(expected).toEqual(result);
+    myLinkList.addToHead(1); // add first value as head
+    myLinkList.addToHead(2);
+    myLinkList.addToHead(3);
+    myLinkList.addAtIndex(3, 4);
+    myLinkList.addAfterHead(myLinkList.head, 5);
+    myLinkList.addToTail(6);
+    // myLinkList.deleteAtIndex(0);
+    // const expected = myLinkList.get(0);
+    // const result = 4;
+    const expected2 = myLinkList.print();
+    const result2 = "352146";
+    expect(expected2).toEqual(result2);
   });
 });

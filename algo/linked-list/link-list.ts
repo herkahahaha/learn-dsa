@@ -1,81 +1,125 @@
 class Node {
-  constructor(public data: number, public next: Node | null = null) {}
+  constructor(public val: number, public next: Node | null = null) {
+    // this.val = val === undefined ? 0 : val;
+    // this.next = next === undefined ? null : next;
+  }
 }
 
 class LinkList {
   head: Node | null = null;
 
-  // add value in last of the list
-  append(data: number) {
-    const newNode = new Node(data);
-    if (!this.head) {
-      this.head = newNode;
-      // console.log("head ", this.head);
-    } else {
-      let current = this.head;
-      while (current.next) {
-        current = current.next;
-      }
-      current.next = newNode;
-      // console.log("current ", current);
+  // length
+  getLength() {
+    let len = 0;
+    let curr = this.head;
+    while (curr !== null) {
+      curr = curr.next;
+      len++;
     }
+    return len;
   }
 
-  // print the values of linked list
-  print() {
-    let current = this.head;
-    let str = "";
-    while (current) {
-      str += current.data;
-      console.log(current.data);
-      current = current.next;
+  // Get
+  get(index: number): number {
+    if (index < 0 || index >= this.getLength()) return -1;
+    let curr: Node | any = this.head;
+    for (let i = 0; i < index; i++) {
+      curr = curr.next;
     }
-    return str;
+    return curr?.val as number;
   }
 
-  // delete
-  delete(value: number): void {
-    if (!this.head) {
-      return; // Senarai kosong
+  // Add to Head
+  addToHead(val: number): void {
+    let node = new Node(val);
+    node.next = this.head;
+    this.head = node;
+  }
+
+  // add value after head
+  addAfterHead(existingNode: Node, val: number): void {
+    if (!existingNode) return;
+    const node = new Node(val);
+    node.next = existingNode.next;
+    existingNode.next = node;
+  }
+
+  // add to tail
+  addToTail(val: number): void {
+    if (this.head === null) {
+      this.addToHead(val);
+      return;
     }
 
-    // Jika simpul pertama memiliki nilai yang sesuai
-    if (this.head.data === value) {
+    let node = new Node(val);
+    let curr = this.head;
+    while (curr?.next !== null) {
+      curr = curr?.next;
+    }
+    curr.next = node;
+  }
+
+  // Add to Index
+  addAtIndex(index: number, val: number): void {
+    if (index === 0) {
+      this.addToHead(val);
+    }
+    if (index === this.getLength()) {
+      this.addToTail(val);
+      return;
+    }
+    if (index > this.getLength()) return;
+    let node = new Node(val);
+    let curr: Node | any = this.head;
+    for (let i = 0; i < index - 1; i++) {
+      curr = curr?.next;
+    }
+    let next = curr?.next;
+    curr.next = node;
+    node.next = next;
+  }
+
+  // delete at index
+  deleteAtIndex(index: number): void {
+    if (index < 0 || index >= this.getLength()) return;
+    if (index === 0) {
+      this.head = this.head?.next as Node;
+      return;
+    }
+    let curr: Node | any = this.head;
+    for (let i = 0; i < index - 1; i++) {
+      curr = curr?.next;
+    }
+    curr.next = curr.next.next;
+  }
+
+  // delete by value
+  delete(val: number): void {
+    if (!this.head) return;
+    if (this.head.val === val) {
       this.head = this.head.next;
       return;
     }
-
-    let current = this.head;
-    let prev: Node | null = null;
-
-    // Cari simpul dengan nilai yang sesuai
-    // while (current && current?.data !== value) {
-    //   prev = current;
-    //   current = current?.next as never;
-    // }
-
-    // Jika ditemukan, ubah tautan
-    // if (current) {
-    //   prev!.next = current.next;
-    // }
-
-    while (current.next) {
-      if (current.next.data === value) {
-        current.next = current.next.next;
+    let curr = this.head;
+    while (curr?.next) {
+      // curr.next.val === val
+      if (curr?.next.val === val) {
+        curr.next = curr.next.next;
         return;
       }
-      current = current.next;
+      curr = curr.next;
     }
   }
 
-  // Add value in middle
-  insertAfter(existingNode: Node, data: number) {
-    if (!existingNode) {
-      return;
-    } // not valid
-    const newNode = new Node(data);
-    newNode.next = existingNode.next;
-    existingNode.next = newNode;
+  print(): string {
+    let currents = this.head;
+    let str = "";
+    while (currents) {
+      str += currents.val;
+      console.log(currents.val);
+      currents = currents.next;
+    }
+    return str;
   }
 }
 

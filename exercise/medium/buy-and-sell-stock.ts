@@ -13,7 +13,7 @@ day 5 => 6 //sell
     profit => 6-3 = 3
 total = 6 + 3
 
-
+for multiple buy and sell
 my consern loop prices like this
 - currentHoldPrice === -Infinity
 - currentNotHold = 0
@@ -36,3 +36,36 @@ export const BuySellStock = (prices: number[]): number => {
   }
   return currentNotHold;
 };
+
+// multiple buy and sell
+export const BuySellStock1 = (prices: number[]): number => {
+  let totalProfit = 0;
+
+  for (let i = 1; i < prices.length; i++) {
+    if (prices[i] > prices[i - 1]) {
+      totalProfit += prices[i] - prices[i - 1];
+    }
+  }
+  return totalProfit;
+};
+
+// pass on leetcode
+export function BuySellStock2(prices: number[]): number {
+  // prices.sort((a, b) => a - b);
+  let left = 0;
+  let right = 1;
+  let maxProfit = 0;
+
+  while (right < prices.length) {
+    // console.log(prices[right]);
+    if (prices[left] < prices[right]) {
+      const profit = prices[right] - prices[left];
+      maxProfit = Math.max(maxProfit, profit);
+    } else {
+      left = right;
+    }
+    right += 1;
+  }
+
+  return maxProfit;
+}

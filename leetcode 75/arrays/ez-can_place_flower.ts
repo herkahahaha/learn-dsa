@@ -46,3 +46,17 @@ export function canPlaceFlower(flowerbed: number[], n: number): boolean {
   }
   return false;
 }
+
+export function canPlaceFlower2(flowerbed: number[], n: number): boolean {
+  for (let i = 0; i < flowerbed.length; i++) {
+    if (
+      flowerbed[i] === 0 &&
+      (i === 0 || flowerbed[i - 1] === 0) &&
+      (i === flowerbed.length - 1 || flowerbed[i + 1] === 0)
+    ) {
+      flowerbed[i] = 1;
+      n--;
+    }
+  }
+  return n === 0;
+}
